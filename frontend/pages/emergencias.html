@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telefones de Emergência | ReViver</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../js/emergencias.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container cabecalho-container">
+            <div class="marca-area">
+                <img src="../assets/logo.png" alt="Logo ReViver" class="logo-cabecalho">
+                <span class="marca">ReViver</span>
+            </div>
+            <span class="subtitulo">Canais de Apoio e Emergência</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="titulo-pagina">
+            <p class="legenda">ACOLHIMENTO E APOIO IMEDIATO</p>
+            <h1>Telefones de emergências</h1>
+            <p>Serviços gratuitos e confidenciais disponíveis para atendimento em situações de crise ou emergência.</p>
+        </div>
+
+        <p id="mensagem" class="mensagem" role="status" aria-live="polite" hidden></p>
+
+        <section class="painel" aria-labelledby="titulo-lista">
+            <div class="painel-titulo">
+                <h2 id="titulo-lista">Contatos úteis e serviços públicos</h2>
+                <span id="total-emergencias" class="legenda">Carregando...</span>
+            </div>
+
+            <div class="barra-lista">
+                <form id="form-busca" class="busca">
+                    <label for="busca-termo">Filtrar serviço ou número</label>
+                    <input id="busca-termo" class="input-busca-largo" type="text" placeholder="Ex.: 188, SAMU, CVV...">
+                    <button class="botao botao-secundario" type="submit">Filtrar</button>
+                </form>
+                <button id="botao-listar" class="botao botao-secundario" type="button">Mostrar todos</button>
+            </div>
+
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Número</th>
+                            <th scope="col">Serviço</th>
+                            <th scope="col">Quando ligar</th>
+                            <th scope="col">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-emergencias">
+                        <tr>
+                            <td colspan="4" class="vazio">Carregando telefones de emergência...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">ReViver © Você não está sozinho — Em caso de risco imediato, ligue agora.</footer>
+</body>
+</html>

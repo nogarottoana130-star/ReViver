@@ -6,6 +6,15 @@ class ServicoEntrada(BaseModel):
 
     @field_validator("nome_servico")
     @classmethod
+    def validar_nome_servico(cls, valor: str) -> str:
+        valor = valor.strip()
+        if not valor:
+            raise ValueError(
+                "O nome do serviço não pode ficar vazio."
+            )
+        return valor
+    @field_validator("servico")
+    @classmethod
     def validar_servico(cls, valor: str) -> str:
         valor = valor.strip()
         if not valor:
@@ -13,6 +22,5 @@ class ServicoEntrada(BaseModel):
                 "O nome do serviço não pode ficar vazio."
             )
         return valor
-
 class ServicoSaida(ServicoEntrada):
     id_servico: int

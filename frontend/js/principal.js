@@ -65,7 +65,7 @@ cardInformacoes.addEventListener('click', () => {
 
 cardDados.addEventListener('click', () => {
   mostrarMensagem('Redirecionando para a gestão dos seus dados...');
-  window.location.href = 'suas_informacoes.html';
+  window.location.href = 'meus_dados.html';
 });
 
 btnPedirAjuda.addEventListener('click', async () => {

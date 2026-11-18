@@ -6,13 +6,21 @@ class EspecialidadeEntrada(BaseModel):
     
     @field_validator("nome_especialidade")
     @classmethod
-    def validar_especialidade(cls, valor: str) -> str:
+    def validar_nome_especialidade(cls, valor: str) -> str:
         valor = valor.strip()
         if not valor:
             raise ValueError(
                 "O nome da especialidade não pode ficar vazio."
             )
         return valor
-
+    @field_validator("especialidade")
+    @classmethod
+    def validar_especialidade(cls, valor: str) -> str:
+        valor = valor.strip()
+        if not valor:
+            raise ValueError(
+                "A especialidade não pode ficar vazia."
+            )
+        return valor
 class EspecialidadeSaida(EspecialidadeEntrada):
     id_especialidade: int
