@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa de Acolhimento | ReViver</title>
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../js/mapa.js" defer></script>
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="container flex-cabecalho">
+      <div class="brand-group">
+        <img src="../assets/logo.png" alt="Logo ReViver" class="logo">
+        <div class="brand-text">
+          <span class="marca">ReViver</span>
+          <span class="subtitulo">Você não está sozinho</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="principal.html" class="link-nav">Início</a>
+        <a href="mapa.html" class="link-nav ativo">Mapa</a>
+        <a href="suas_informacoes.html" class="link-nav">Suas Informações</a>
+        <a href="cadastro_usuario.html" class="link-nav">Usuários</a>
+        <a href="cadastro_clinicas.html" class="link-nav">Clínicas</a>
+        <a href="cadastro_servicos.html" class="link-nav">Serviços</a>
+        <a href="cadastro_especialidades.html" class="link-nav">Especialidades</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <div class="titulo-pagina">
+      <p class="legenda">LOCALIZAÇÃO E ATENDIMENTO</p>
+      <h1>Mapa</h1>
+      <p>Encontre os pontos de acolhimento mais próximos de você.</p>
+    </div>
+
+    <p id="mensagem" class="mensagem" role="status" aria-live="polite" hidden></p>
+
+    <!-- Barra de busca e localização -->
+    <section class="painel" aria-label="Busca por endereço">
+      <div class="formulario-busca-mapa">
+        <div class="campo flex-1">
+          <label for="busca-endereco">Digite seu endereço ou use sua localização atual</label>
+          <div class="input-com-botao">
+            <input id="busca-endereco" type="text" placeholder="Ex.: Rua, bairro ou cidade...">
+            <button id="btn-usar-localizacao" class="botao botao-secundario" type="button">Usar minha localização</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layout Duplo: Mapa Visual e Listagem de Locais -->
+    <div class="layout-duplo">
+      
+      <!-- Container do Mapa Visual -->
+      <section class="painel flex-2 container-mapa-visual" aria-label="Visualização do mapa">
+        <div class="mapa-placeholder">
+          <div class="marcador-mapa m1" title="Anjos da Vida Maringá">
+            <span class="icone-pin">+</span>
+          </div>
+          <div class="marcador-mapa m2" title="Cerco - Casa do Oleiro">
+            <span class="icone-pin">+</span>
+          </div>
+          <div class="marcador-mapa m3" title="MAREV - Apoio e Acolhimento">
+            <span class="icone-pin">+</span>
+          </div>
+          <div class="marcador-mapa m4"><span class="icone-pin">+</span></div>
+          <div class="marcador-mapa m5"><span class="icone-pin">+</span></div>
+          <div class="marcador-mapa m6"><span class="icone-pin">+</span></div>
+          <div class="marcador-mapa m7"><span class="icone-pin">+</span></div>
+          
+          <div class="rotulo-cidade">Maringá</div>
+        </div>
+      </section>
+
+      <!-- Lista de Locais de Acolhimento -->
+      <aside class="flex-1 lista-pontos-acolhimento" aria-label="Locais de acolhimento disponíveis">
+        
+        <!-- Ponto 1 -->
+        <article class="card-ponto-acolhimento">
+          <div class="cabecalho-ponto">
+            <h2>Anjos da Vida Maringá</h2>
+            <span class="distancia-ponto">2,3 km</span>
+          </div>
+          <p class="descricao-ponto">
+            Instituição especializada no tratamento de dependência química, alcoolismo e saúde mental.
+          </p>
+        </article>
+
+        <!-- Ponto 2 -->
+        <article class="card-ponto-acolhimento">
+          <div class="cabecalho-ponto">
+            <h2>Cerco - Casa do Oleiro</h2>
+            <span class="distancia-ponto">4,1 km</span>
+          </div>
+          <p class="descricao-ponto">
+            Comunidade terapêutica voltada para a recuperação de homens dependentes químicos e alcoólicos.
+          </p>
+        </article>
+
+        <!-- Ponto 3 -->
+        <article class="card-ponto-acolhimento">
+          <div class="cabecalho-ponto">
+            <h2>MAREV - Apoio e Acolhimento</h2>
+            <span class="distancia-ponto">5,6 km</span>
+          </div>
+          <p class="descricao-ponto">
+            Centro de reabilitação voluntário e residencial para dependentes de álcool e drogas, focado na mudança de estilo de vida e no apoio à família.
+          </p>
+        </article>
+
+      </aside>
+
+    </div>
+
+    <footer class="rodape">
+      ReViver © 2026 - Apoio e acolhimento. Você não está sozinho.
+    </footer>
+  </main>
+
+</body>
+</html>

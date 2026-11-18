@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Conta de Serviços | ReViver</title>
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../js/conta_servicos.js" defer></script>
+</head>
+<body>
+  
+  <header class="cabecalho">
+    <div class="container flex-cabecalho">
+      <div class="brand-group">
+        <img src="../assets/logo.png" alt="Logo ReViver" class="logo">
+        <div class="brand-text">
+          <span class="marca">ReViver</span>
+          <span class="subtitulo">Você não está sozinho</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="link-nav">Início</a>
+        <a href="suas_informacoes.html" class="link-nav">Suas Informações</a>
+        <a href="conta_usuario.html" class="link-nav">Criar Conta</a>
+        <a href="cadastro_usuario.html" class="link-nav">Usuários</a>
+        <a href="conta_clinicas.html" class="link-nav">Clínicas</a>
+        <a href="conta_servicos.html" class="link-nav ativo">Criar Serviço</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <div class="titulo-pagina">
+      <p class="legenda">CADASTRO DE SERVIÇOS DE APOIO</p>
+      <h1>Criar conta de serviços</h1>
+      <p>Preencha os dados abaixo para começar. Coragem para mudar é o que te traz até aqui.</p>
+    </div>
+
+    <p id="mensagem" class="mensagem" role="status" aria-live="polite" hidden></p>
+
+    <div class="layout-duplo">
+      <!-- Formulário de Cadastro -->
+      <section class="painel flex-2" aria-labelledby="titulo-formulario">
+        <div class="painel-titulo">
+          <h2 id="titulo-formulario">Dados do Serviço</h2>
+          <span class="legenda">NOVO SERVIÇO</span>
+        </div>
+
+        <form id="form-conta-servico" class="formulario">
+          
+          <!-- Campo: Tipo/Categoria de Serviço -->
+          <div class="campo-com-icone">
+            <div class="icone-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="campo flex-1">
+              <label for="tipo-servico">Serviço (Categoria)</label>
+              <input id="tipo-servico" type="text" placeholder="Ex.: Acolhimento, Terapia, Suporte Psicológico" required>
+            </div>
+          </div>
+
+          <!-- Campo: Nome do Serviço -->
+          <div class="campo-com-icone">
+            <div class="icone-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="campo flex-1">
+              <label for="nome-servico">Nome do serviço</label>
+              <input id="nome-servico" type="text" placeholder="Digite o nome completo do serviço" required>
+            </div>
+          </div>
+
+          <!-- Botão Principal -->
+          <div class="acoes acoes-bloco">
+            <button id="botao-cadastrar" class="botao botao-destaque-azul" type="submit">Cadastrar</button>
+          </div>
+
+        </form>
+      </section>
+
+      <!-- Painel de Acolhimento / Inspiracional (Esboço da Imagem) -->
+      <aside class="painel-inspiracional flex-1">
+        <div class="frase-destaque">
+          <span class="barra-vertical"></span>
+          <p>Coragem para mudar é o que te traz até aqui.</p>
+        </div>
+        <div class="logo-inspiracional-container">
+          <img src="../assets/logo.png" alt="Símbolo ReViver" class="logo-inspiracional">
+        </div>
+      </aside>
+    </div>
+
+    <footer class="rodape">
+      ReViver © 2026 - Apoio e acolhimento. Você não está sozinho.
+    </footer>
+  </main>
+
+</body>
+</html>

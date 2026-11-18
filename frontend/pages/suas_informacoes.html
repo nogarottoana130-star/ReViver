@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus dados | ReViver</title>
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../js/suas_informacoes.js" defer></script>
+</head>
+<body>
+  
+  <header class="cabecalho">
+    <div class="container flex-cabecalho">
+      <div class="brand-group">
+        <img src="../assets/logo.png" alt="Logo ReViver" class="logo">
+        <div class="brand-text">
+          <span class="marca">ReViver</span>
+          <span class="subtitulo">Você não está sozinho</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="principal.html" class="link-nav">Início</a>
+        <a href="suas_informacoes.html" class="link-nav ativo">Suas Informações</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <div class="titulo-pagina">
+      <p class="legenda">CADASTRO DE PERFIL</p>
+      <h1>Meus dados</h1>
+      <p>Nos conte um pouco sobre você.</p>
+    </div>
+
+    <p id="mensagem" class="mensagem" role="status" aria-live="polite" hidden></p>
+
+    <section class="painel" aria-labelledby="titulo-formulario">
+      <div class="painel-titulo">
+        <h2 id="titulo-formulario">Preencha os seus dados</h2>
+        <span class="legenda">ETAPA 1 DE 2</span>
+      </div>
+
+      <form id="form-informacoes" class="formulario">
+        
+        <div class="campo-com-icone">
+          <div class="icone-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="campo flex-1">
+            <label for="email-usuario">Email</label>
+            <input id="email-usuario" type="email" placeholder="Digite seu email" required>
+          </div>
+        </div>
+
+        <div class="campo-com-icone">
+          <div class="icone-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <div class="campo flex-1">
+            <label for="senha-usuario">Senha</label>
+            <input id="senha-usuario" type="password" placeholder="Digite sua senha" required>
+          </div>
+        </div>
+
+        <div class="campo-com-icone">
+          <div class="icone-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+              <polyline points="17 21 17 13 7 13 7 21"></polyline>
+              <polyline points="7 3 7 8 15 8"></polyline>
+            </svg>
+          </div>
+          <div class="campo flex-1">
+            <label for="tipo-ajuda">Qual tipo de substância você utiliza?</label>
+            <div class="select-wrapper">
+              <select id="tipo-ajuda" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="profissional">Profissional de Saúde</option>
+                <option value="apoio_emocional">Grupo de Apoio Emocional</option>
+                <option value="comunitario">Serviço Comunitário</option>
+                <option value="nenhum">Nenhum no momento</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="campo-com-icone alinhar-topo">
+          <div class="icone-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <div class="campo flex-1">
+            <label for="situacao-usuario">Qual a situação que você está passando?</label>
+            <textarea id="situacao-usuario" rows="4" placeholder="Conte um pouco sobre o que está acontecendo...." required></textarea>
+          </div>
+        </div>
+
+        <div class="acoes acoes-direita">
+          <button id="botao-continuar" class="botao botao-principal" type="submit">Continuar</button>
+        </div>
+
+      </form>
+    </section>
+
+    <footer class="rodape">
+      ReViver © 2026 - Apoio e acolhimento. Você não está sozinho.
+    </footer>
+  </main>
+
+</body>
+</html>

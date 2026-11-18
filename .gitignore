@@ -1,0 +1,8 @@
+venv/
+.venv/
+--pycache__/
+*.pyc
+.env
+node_modules/
+/ReViver/
+.vscode/

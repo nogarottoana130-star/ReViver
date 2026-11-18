@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Especialidades Cadastradas | ReViver</title>
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../js/cadastro_especialidades.js" defer></script>
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="container flex-cabecalho">
+      <div class="brand-group">
+        <img src="../assets/logo.png" alt="Logo ReViver" class="logo">
+        <div class="brand-text">
+          <span class="marca">ReViver</span>
+          <span class="subtitulo">Você não está sozinho</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="principal.html" class="link-nav">Início</a>
+        <a href="suas_informacoes.html" class="link-nav">Suas Informações</a>
+        <a href="conta_usuario.html" class="link-nav">Criar Conta</a>
+        <a href="cadastro_usuario.html" class="link-nav">Usuários</a>
+        <a href="conta_clinicas.html" class="link-nav">Clínicas</a>
+        <a href="conta_servicos.html" class="link-nav">Criar Serviço</a>
+        <a href="cadastro_servicos.html" class="link-nav">Serviços</a>
+        <a href="conta_especialidades.html" class="link-nav">Criar Especialidade</a>
+        <a href="cadastro_especialidades.html" class="link-nav ativo">Especialidades</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <div class="titulo-pagina">
+      <p class="legenda">CONSULTA E GESTÃO DE ESPECIALIDADES</p>
+      <h1>Especialidades cadastradas</h1>
+      <p>Consulte e acompanhe as especialidades profissionais disponíveis no sistema.</p>
+    </div>
+
+    <p id="mensagem" class="mensagem" role="status" aria-live="polite" hidden></p>
+
+    <section class="painel" aria-labelledby="titulo-lista">
+      <div class="painel-titulo">
+        <h2 id="titulo-lista">Lista de Especialidades</h2>
+        <span id="total-especialidades" class="legenda">Carregando...</span>
+      </div>
+
+      <div class="barra-lista">
+        <form id="form-busca" class="busca">
+          <label for="busca-id">Buscar por ID</label>
+          <input id="busca-id" type="number" min="1" step="1" placeholder="Ex.: 1" required>
+          <button class="botao botao-secundario" type="submit">Consultar</button>
+        </form>
+        <button id="botao-listar" class="botao botao-secundario" type="button">Atualizar lista</button>
+      </div>
+
+      <div class="tabela-container">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Especialidade</th>
+              <th scope="col">Nome da especialidade</th>
+              <th scope="col">Ações</th>
+            </tr>
+          </thead>
+          <tbody id="lista-especialidades">
+            <tr>
+              <td colspan="4" class="vazio">Carregando especialidades...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="rodape">
+      ReViver © 2026 - Apoio e acolhimento. Você não está sozinho.
+    </footer>
+  </main>
+
+</body>
+</html>

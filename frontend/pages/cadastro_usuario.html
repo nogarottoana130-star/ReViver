@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuários Cadastrados | ReViver</title>
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../js/cadastro_usuario.js" defer></script>
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="container flex-cabecalho">
+      <div class="brand-group">
+        <img src="../assets/logo.png" alt="Logo ReViver" class="logo">
+        <div class="brand-text">
+          <span class="marca">ReViver</span>
+          <span class="subtitulo">Você não está sozinho</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="principal.html" class="link-nav">Início</a>
+        <a href="suas_informacoes.html" class="link-nav">Suas Informações</a>
+        <a href="conta_usuario.html" class="link-nav">Criar Conta</a>
+        <a href="cadastro_usuario.html" class="link-nav ativo">Usuários</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <div class="titulo-pagina">
+      <p class="legenda">CONSULTA E GESTÃO</p>
+      <h1>Usuários cadastrados</h1>
+      <p>Consulte e acompanhe os usuários cadastrados na plataforma.</p>
+    </div>
+
+    <p id="mensagem" class="mensagem" role="status" aria-live="polite" hidden></p>
+
+    <section class="painel" aria-labelledby="titulo-lista">
+      <div class="painel-titulo">
+        <h2 id="titulo-lista">Lista de Usuários</h2>
+        <span id="total-usuarios" class="legenda">Carregando...</span>
+      </div>
+
+      <div class="barra-lista">
+        <form id="form-busca" class="busca">
+          <label for="busca-id">Buscar por ID</label>
+          <input id="busca-id" type="number" min="1" step="1" placeholder="Ex.: 1" required>
+          <button class="botao botao-secundario" type="submit">Consultar</button>
+        </form>
+        <button id="botao-listar" class="botao botao-secundario" type="button">Atualizar lista</button>
+      </div>
+
+      <div class="tabela-container">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Email</th>
+              <th scope="col">CPF</th>
+              <th scope="col">Telefone</th>
+              <th scope="col">Data de nascimento</th>
+              <th scope="col">Ações</th>
+            </tr>
+          </thead>
+          <tbody id="lista-usuarios">
+            <tr>
+              <td colspan="7" class="vazio">Carregando usuários...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="rodape">
+      ReViver © 2026 - Apoio e acolhimento. Você não está sozinho.
+    </footer>
+  </main>
+
+</body>
+</html>

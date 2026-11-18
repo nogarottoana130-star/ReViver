@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot de Acolhimento | ReViver</title>
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../js/chatbot.js" defer></script>
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="container flex-cabecalho">
+      <div class="brand-group">
+        <img src="../assets/logo.png" alt="Logo ReViver" class="logo">
+        <div class="brand-text">
+          <span class="marca">ReViver</span>
+          <span class="subtitulo">Você não está sozinho</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="principal.html" class="link-nav">Início</a>
+        <a href="chatbot.html" class="link-nav ativo">Chatbot</a>
+        <a href="mapa.html" class="link-nav">Mapa</a>
+        <a href="suas_informacoes.html" class="link-nav">Suas Informações</a>
+        <a href="cadastro_usuario.html" class="link-nav">Usuários</a>
+        <a href="cadastro_clinicas.html" class="link-nav">Clínicas</a>
+        <a href="cadastro_servicos.html" class="link-nav">Serviços</a>
+        <a href="cadastro_especialidades.html" class="link-nav">Especialidades</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <div class="titulo-pagina">
+      <p class="legenda">ASSISTENTE VIRTUAL DE SUPORTE</p>
+      <h1>Chatbot</h1>
+      <p>Estamos aqui para te ouvir. Você pode conversar com o nosso assistente sobre o que está sentindo, tirar dúvidas e pedir ajuda.</p>
+    </div>
+
+    <p id="mensagem" class="mensagem" role="status" aria-live="polite" hidden></p>
+
+    <section class="painel painel-chat" aria-label="Interface de bate-papo">
+      
+      <!-- Histórico de Mensagens -->
+      <div id="chat-historico" class="chat-historico">
+        
+        <!-- Mensagem do Usuário -->
+        <div class="mensagem-chat usuario">
+          <div class="balao-chat">
+            <p>Eu estou passando por uma crise de ansiedade porque já fazem 3 dias que não bebo álcool.</p>
+            <span class="chat-hora">14:32</span>
+          </div>
+        </div>
+
+        <!-- Mensagem do Assistente -->
+        <div class="mensagem-chat assistente">
+          <div class="balao-chat">
+            <p>Entendi. Você já tentou procurar ajuda em algum lugar?</p>
+            <p>Posso te mostrar os pontos de acolhimento mais próximos de você e te passar mais informações sobre o processo de recuperação. Também posso te ajudar a entender melhor sobre os riscos e benefícios de parar.</p>
+            <p>O que você prefere fazer agora?</p>
+            <span class="chat-hora">14:32</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Formulário de Envio de Mensagem -->
+      <form id="form-chat" class="chat-input-area">
+        <input id="chat-mensagem-input" type="text" placeholder="Digite sua mensagem...." required>
+        <button class="botao botao-principal" type="submit">Enviar</button>
+      </form>
+
+    </section>
+
+    <footer class="rodape">
+      ReViver © 2026 - Apoio e acolhimento. Você não está sozinho.
+    </footer>
+  </main>
+
+</body>
+</html>

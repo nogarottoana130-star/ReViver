@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Conta de Clínicas | ReViver</title>
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../js/conta_clinicas.js" defer></script>
+</head>
+<body>
+  
+  <header class="cabecalho">
+    <div class="container flex-cabecalho">
+      <div class="brand-group">
+        <img src="../assets/logo.png" alt="Logo ReViver" class="logo">
+        <div class="brand-text">
+          <span class="marca">ReViver</span>
+          <span class="subtitulo">Você não está sozinho</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="link-nav">Início</a>
+        <a href="suas_informacoes.html" class="link-nav">Suas Informações</a>
+        <a href="conta_usuario.html" class="link-nav">Criar Conta</a>
+        <a href="cadastro_usuario.html" class="link-nav">Usuários</a>
+        <a href="conta_clinicas.html" class="link-nav ativo">Criar Conta Clínica</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <div class="titulo-pagina">
+      <p class="legenda">CADASTRO DE INSTITUIÇÃO</p>
+      <h1>Criar conta de clínicas</h1>
+      <p>Preencha os dados abaixo para começar. Um novo começo é possível. E ele começa com você.</p>
+    </div>
+
+    <p id="mensagem" class="mensagem" role="status" aria-live="polite" hidden></p>
+
+    <section class="painel" aria-labelledby="titulo-formulario">
+      <div class="painel-titulo">
+        <h2 id="titulo-formulario">Dados da Clínica</h2>
+        <span class="legenda">NOVO CADASTRO</span>
+      </div>
+
+      <form id="form-conta-clinica" class="formulario">
+        
+        <!-- Campo: Nome -->
+        <div class="campo-com-icone">
+          <div class="icone-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="campo flex-1">
+            <label for="nome-clinica">Nome da clínica</label>
+            <input id="nome-clinica" type="text" placeholder="Digite o nome da clínica" required>
+          </div>
+        </div>
+
+        <!-- Campo: Endereço -->
+        <div class="campo-com-icone">
+          <div class="icone-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <div class="campo flex-1">
+            <label for="endereco-clinica">Endereço</label>
+            <input id="endereco-clinica" type="text" placeholder="Rua, número, bairro" required>
+          </div>
+        </div>
+
+        <!-- Campo: Cidade -->
+        <div class="campo-com-icone">
+          <div class="icone-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+              <line x1="9" y1="6" x2="9" y2="6.01"></line>
+              <line x1="15" y1="6" x2="15" y2="6.01"></line>
+              <line x1="9" y1="10" x2="9" y2="10.01"></line>
+              <line x1="15" y1="10" x2="15" y2="10.01"></line>
+              <line x1="9" y1="14" x2="9" y2="14.01"></line>
+              <line x1="15" y1="14" x2="15" y2="14.01"></line>
+              <line x1="9" y1="18" x2="15" y2="18"></line>
+            </svg>
+          </div>
+          <div class="campo flex-1">
+            <label for="cidade-clinica">Cidade</label>
+            <input id="cidade-clinica" type="text" placeholder="Digite a cidade" required>
+          </div>
+        </div>
+
+        <!-- Campo: Telefone -->
+        <div class="campo-com-icone">
+          <div class="icone-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <div class="campo flex-1">
+            <label for="telefone-clinica">Telefone</label>
+            <input id="telefone-clinica" type="tel" placeholder="(00) 00000-0000" required>
+          </div>
+        </div>
+
+        <!-- Campo: Vagas disponíveis -->
+        <div class="campo-com-icone">
+          <div class="icone-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+              <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+              <path d="M9 14l2 2 4-4"></path>
+            </svg>
+          </div>
+          <div class="campo flex-1">
+            <label for="vagas-clinica">Vagas disponíveis</label>
+            <input id="vagas-clinica" type="number" min="0" step="1" placeholder="Quantidade de vagas disponíveis" required>
+          </div>
+        </div>
+
+        <!-- Botão Principal -->
+        <div class="acoes acoes-bloco">
+          <button id="botao-cadastrar" class="botao botao-destaque-azul" type="submit">Cadastrar</button>
+        </div>
+
+      </form>
+    </section>
+
+    <footer class="rodape">
+      ReViver © 2026 - Apoio e acolhimento. Você não está sozinho.
+    </footer>
+  </main>
+
+</body>
+</html>
