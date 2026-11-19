@@ -1,0 +1,311 @@
+/* Estilos compartilhados e expansíveis do sistema ReViver */
+:root {
+  --marinho: #132f50;
+  --laranja: #f79b38;
+  --laranja-hover: #ed8920;
+  --azul-claro: #dcecf8;
+  --texto-suave: #526c83;
+  --fundo: #f2f6fa;
+  --borda: #cbd9e5;
+  --branco: #fff;
+
+  /* Tema Dark / Identidade ReViver */
+  --bg-dark: #071e26;
+  --card-dark: #0c2b36;
+  --input-bg: #0d3442;
+  --input-border: #235c70;
+  --text-light: #ffffff;
+  --text-muted: #8ab4c4;
+  --accent-cyan: #00a8e8;
+  --btn-hover: #0090c7;
+  --brand-blue: #0084c7;
+  --alerta-emergencia: #d9381e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--marinho);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: auto;
+}
+
+/* Header & Marca */
+.cabecalho {
+  background: var(--marinho);
+  color: var(--azul-claro);
+  padding: 16px 0;
+  border-bottom: 5px solid var(--accent-cyan);
+}
+
+.cabecalho-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.marca-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-cabecalho {
+  width: 36px;
+  height: auto;
+}
+
+.marca {
+  color: var(--branco);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.subtitulo {
+  font-size: 14px;
+  color: var(--azul-claro);
+}
+
+/* Título e Seções */
+.titulo-pagina {
+  margin: 32px 0 24px;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 34px;
+  margin-bottom: 4px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.titulo-pagina > p:last-child {
+  color: var(--texto-suave);
+}
+
+.legenda {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: var(--texto-suave);
+}
+
+/* Painéis e Listagem */
+.painel {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 26px;
+  box-shadow: 0 5px 18px rgba(19, 47, 80, 0.05);
+}
+
+.painel-titulo {
+  background: var(--azul-claro);
+  padding: 17px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--borda);
+}
+
+.barra-lista {
+  padding: 22px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.busca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input, button {
+  font: inherit;
+}
+
+input:not([type="range"]) {
+  padding: 10px 12px;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  color: var(--marinho);
+  background: white;
+}
+
+.busca input {
+  max-width: 120px;
+}
+
+.busca .input-busca-largo {
+  max-width: 240px;
+  width: 240px;
+}
+
+/* Tabela e Células */
+.tabela-container {
+  overflow-x: auto;
+  padding: 0 24px 24px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th {
+  background: var(--azul-claro);
+  font-size: 13px;
+  color: var(--marinho);
+}
+
+th, td {
+  padding: 14px 12px;
+  border: 1px solid var(--borda);
+  vertical-align: middle;
+}
+
+tbody tr:nth-child(even) {
+  background: #f6f9fc;
+}
+
+.numero-destaque {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--marinho);
+  white-space: nowrap;
+}
+
+.servico-nome {
+  font-weight: bold;
+  color: var(--marinho);
+  min-width: 180px;
+}
+
+td:last-child {
+  white-space: nowrap;
+}
+
+.vazio {
+  text-align: center;
+  color: var(--texto-suave);
+  padding: 28px;
+}
+
+/* Botões e Links de Discagem */
+.botao {
+  display: inline-block;
+  border: 1px solid var(--marinho);
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.botao-principal {
+  background: var(--laranja);
+  color: var(--marinho);
+  border-color: var(--laranja);
+}
+
+.botao-principal:hover {
+  background: var(--laranja-hover);
+}
+
+.botao-secundario {
+  background: white;
+  color: var(--marinho);
+}
+
+.botao-secundario:hover {
+  background: var(--azul-claro);
+}
+
+.botao-ligar {
+  background: var(--brand-blue);
+  color: var(--branco);
+  border-color: var(--brand-blue);
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+.botao-ligar:hover {
+  background: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+}
+
+/* Mensagens de Feedback */
+.mensagem {
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  border: 1px solid #98baa9;
+  border-radius: 6px;
+  background: #eaf6ed;
+  color: #245037;
+}
+
+.mensagem.erro {
+  background: #fff0eb;
+  border-color: #d5a18a;
+  color: #79321d;
+}
+
+.rodape {
+  color: var(--texto-suave);
+  text-align: center;
+  font-size: 12px;
+  padding: 0 0 26px;
+}
+
+/* Responsividade */
+@media (max-width: 760px) {
+  .barra-lista, .busca {
+      flex-wrap: wrap;
+  }
+
+  .busca .input-busca-largo {
+      width: 100%;
+      max-width: 100%;
+  }
+
+  .painel-titulo {
+      align-items: flex-start;
+      flex-direction: column;
+  }
+
+  .subtitulo {
+      display: none;
+  }
+
+  .tabela-container {
+      padding: 0 16px 20px;
+  }
+}

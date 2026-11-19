@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de usuário | ReViver</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../js/criar_conta.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container flex-cabecalho">
+            <div class="brand-group">
+                <img src="../assets/logo.png" alt="Logo ReViver" class="logo">
+                <div class="brand-text">
+                    <span class="marca">ReViver</span>
+                    <span class="subtitulo">Você não está sozinho</span>
+                </div>
+            </div>
+            <nav class="nav-links" aria-label="Navegação principal">
+                <a href="index.html" class="link-nav">Início</a>
+                <a href="emergencias.html" class="link-nav">Telefones de Emergência</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <p id="mensagem" class="mensagem" role="status" aria-live="polite" hidden></p>
+
+        <!-- Cartão Principal em 2 Colunas conforme o esboço (Formulário à esquerda, Logo e Frase à direita) -->
+        <section class="painel painel-cadastro-split" aria-labelledby="titulo-cadastro">
+            <!-- Coluna Esquerda: Seta de voltar, Título e Formulário -->
+            <div class="coluna-form-cadastro">
+                <a href="index.html" class="botao-voltar" aria-label="Voltar para a tela inicial" title="Voltar">
+                    ←
+                </a>
+
+                <div class="cabecalho-form-split">
+                    <h1 id="titulo-cadastro">Cadastro de usuário</h1>
+                    <p>Preencha os dados abaixo para começar.</p>
+                </div>
+
+                <form id="form-usuario" class="formulario-compacto">
+                    <input type="hidden" id="id-usuario" value="">
+
+                    <div class="campo-borda-azul">
+                        <span class="icone-interna" aria-hidden="true">👤</span>
+                        <input id="nome-usuario" type="text" maxlength="150" placeholder="Nome" required>
+                    </div>
+
+                    <div class="campo-borda-azul">
+                        <span class="icone-interna" aria-hidden="true">✉️</span>
+                        <input id="email-usuario" type="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="campo-borda-azul">
+                        <span class="icone-interna" aria-hidden="true">🌐</span>
+                        <input id="cpf-usuario" type="text" maxlength="14" placeholder="CPF" required>
+                    </div>
+
+                    <div class="campo-borda-azul">
+                        <span class="icone-interna" aria-hidden="true">📞</span>
+                        <input id="telefone-usuario" type="tel" placeholder="Telefone" required>
+                    </div>
+
+                    <div class="campo-borda-azul">
+                        <span class="icone-interna" aria-hidden="true">📅</span>
+                        <input id="data-nascimento" type="text" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Data de nascimento" required>
+                    </div>
+
+                    <div class="campo-borda-azul">
+                        <span class="icone-interna" aria-hidden="true">🔒</span>
+                        <input id="senha-usuario" type="password" placeholder="Senha" required>
+                    </div>
+
+                    <button id="botao-salvar" class="botao botao-destaque-azul" type="submit">
+                        Cadastrar
+                    </button>
+                </form>
+            </div>
+
+            <!-- Coluna Direita: Frase com linha vertical azul e Logo grande -->
+            <div class="coluna-arte-cadastro">
+                <div class="citacao-lateral">
+                    <p>Coragem para mudar é o que te traz até aqui.</p>
+                </div>
+
+                <div class="logo-grande-container">
+                    <img src="../assets/logo.png" alt="Logo ReViver" class="logo-grande">
+                </div>
+            </div>
+        </section>
+
+        <!-- Listagem de Usuários Cadastrados (CRUD integrado com a API) -->
+        <section class="painel" aria-labelledby="titulo-lista">
+            <div class="painel-titulo">
+                <h2 id="titulo-lista">Usuários cadastrados</h2>
+                <span id="total-usuarios" class="legenda">Carregando...</span>
+            </div>
+
+            <div class="barra-lista">
+                <form id="form-busca" class="busca">
+                    <label for="busca-id">
+                        Buscar por ID
+                        <input id="busca-id" type="number" min="1" step="1" placeholder="Ex.: 1" required>
+                    </label>
+                    <button class="botao botao-secundario" type="submit">Consultar</button>
+                </form>
+                <div class="acoes">
+                    <button id="botao-limpar" class="botao botao-secundario" type="button">Limpar</button>
+                    <button id="botao-listar" class="botao botao-secundario" type="button">Atualizar lista</button>
+                </div>
+            </div>
+
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">CPF</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col">Nascimento</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-usuarios">
+                        <tr>
+                            <td colspan="7" class="vazio">Carregando usuários...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">ReViver © 2026 — Você não está sozinho</footer>
+</body>
+</html>

@@ -13,6 +13,7 @@ from controller.profissionais import router as profissionais_router
 from controller.atendimento_clinica import router as atendimentos_clinica_router
 from controller.clinica_profissionais import router as clinica_profissionais_router
 from controller.clinica_servicos import router as clinica_servicos_router
+from controller.auth import router as auth_router
 
 logger = logging.getLogger("uvicorn.error")
 app = FastAPI(
@@ -25,6 +26,8 @@ app.add_middleware(
     allow_origins=[
         "http://127.0.0.1:5500",
         "http://localhost:5500",
+        "http://127.0.0.1:5501",
+        "http://localhost:5501",
     ],
     allow_methods=["GET", "POST", "PUT", "DELETE"],
     allow_headers=["Content-Type"],
@@ -69,3 +72,4 @@ app.include_router(profissionais_router)
 app.include_router(atendimentos_clinica_router)
 app.include_router(clinica_profissionais_router)
 app.include_router(clinica_servicos_router)
+app.include_router(auth_router)

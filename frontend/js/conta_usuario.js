@@ -5,6 +5,7 @@ const API_URL = 'http://127.0.0.1:8000/usuarios';
 const formulario = document.querySelector('#form-conta-usuario');
 const campoNome = document.querySelector('#nome');
 const campoEmail = document.querySelector('#email');
+const campoSenha = document.querySelector("#senha");
 const campoCpf = document.querySelector('#cpf');
 const campoTelefone = document.querySelector('#telefone');
 const campoDataNascimento = document.querySelector('#data_nascimento');
@@ -63,9 +64,10 @@ formulario.addEventListener('submit', async (evento) => {
   const cpf = campoCpf.value.trim();
   const telefone = campoTelefone.value.trim();
   const dataNascimento = campoDataNascimento.value;
+  const senha = campoSenha.value.trim();
 
   // Validação simples no frontend
-  if (!nome || !email || !cpf || !telefone || !dataNascimento) {
+  if (!nome || !email || !cpf || !telefone || !dataNascimento || !senha) {
     mostrarMensagem('Preencha todos os campos do formulário.', true);
     return;
   }
@@ -75,7 +77,8 @@ formulario.addEventListener('submit', async (evento) => {
     email: email,
     cpf: cpf,
     telefone: telefone,
-    data_nascimento: dataNascimento
+    data_nascimento: dataNascimento,
+    senha: senha
   };
 
   botaoCadastrar.disabled = true;
@@ -88,7 +91,7 @@ formulario.addEventListener('submit', async (evento) => {
 
     // Redirecionamento após o cadastro bem-sucedido
     setTimeout(() => {
-      window.location.href = 'cadastro_usiario.html';
+      window.location.href = 'cadastro_usuario.html';
     }, 2000);
     
   } catch (erro) {

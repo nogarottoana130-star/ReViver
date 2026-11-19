@@ -19,6 +19,16 @@ class UsuarioEntrada(BaseModel):
             )
         return valor
     
+    @field_validator("email")
+    @classmethod
+    def validar_email(cls, valor: str) -> str:
+        valor = valor.strip()
+        if not valor:
+            raise ValueError(
+                "O email do usuário não pode ficar vazio."
+            )
+        return valor
+    
     @field_validator("senha")
     @classmethod
     def validar_senha(cls, valor: str) -> str:
@@ -29,5 +39,13 @@ class UsuarioEntrada(BaseModel):
             )
         return valor
 
-class UsuarioSaida(UsuarioEntrada):
+# class UsuarioSaida(UsuarioEntrada):
+#     id_usuario: int
+
+class UsuarioSaida(BaseModel):
     id_usuario: int
+    nome: str
+    data_nascimento: date
+    cpf: str
+    email: str
+    telefone: str

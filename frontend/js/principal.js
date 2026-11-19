@@ -5,7 +5,6 @@ const API_URL = 'http://127.0.0.1:8000';
 const mensagem = document.querySelector('#mensagem');
 const cardChatbot = document.querySelector('#card-chatbot');
 const cardMapa = document.querySelector('#card-mapa');
-const cardInformacoes = document.querySelector('#card-informacoes');
 const cardDados = document.querySelector('#card-dados');
 const btnPedirAjuda = document.querySelector('#btn-pedir-ajuda');
 
@@ -49,19 +48,22 @@ async function requisicao(caminho = '', metodo = 'GET', dados = null) {
 
 // Eventos de clique para navegação dos cards da página principal
 cardChatbot.addEventListener('click', () => {
-  mostrarMensagem('Abrindo assistente virtual (Chatbot)...');
-  // Futuro redirecionamento ou abertura do modal do chatbot
+  window.location.href = 'chatbot.html';
 });
 
 cardMapa.addEventListener('click', () => {
   mostrarMensagem('Carregando mapa de pontos de acolhimento próximos...');
+  
   // Futuro redirecionamento para a tela do mapa
 });
 
-cardInformacoes.addEventListener('click', () => {
-  mostrarMensagem('Redirecionando para a central de informações e prevenção...');
-  // Futuro redirecionamento
-});
+// if (cardInformacoes){
+//     cardInformacoes.addEventListener('click', () => {
+//     mostrarMensagem('Redirecionando para a central de informações e prevenção...');
+//     // Futuro redirecionamento
+//   });
+//}
+
 
 cardDados.addEventListener('click', () => {
   mostrarMensagem('Redirecionando para a gestão dos seus dados...');

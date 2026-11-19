@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReViver | Você não está sozinho</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../js/index.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container flex-cabecalho">
+            <div class="brand-group">
+                <img src="../assets/logo.png" alt="Logo ReViver" class="logo">
+                <div class="brand-text">
+                    <span class="marca">ReViver</span>
+                    <span class="subtitulo">Você não está sozinho</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="titulo-pagina">
+            <p class="legenda">ACOLHIMENTO E APOIO</p>
+            <h1>ReViver</h1>
+            <p>Você não está sozinho</p>
+        </div>
+
+        <p id="mensagem" class="mensagem" role="status" aria-live="polite" hidden></p>
+
+        <section class="hero-section" aria-labelledby="titulo-acolhimento">
+            <div class="card-apresentacao">
+                <div class="imagem-destaque-container">
+                    <img src="../assets/logo.png" alt="Logo ReViver" class="imagem-destaque">
+                </div>
+
+                <div class="conteudo-apresentacao">
+                    <h2 id="titulo-acolhimento">Nós acreditamos que nenhuma queda é definitiva, e que toda vida vale o recomeço.</h2>
+                    <p class="texto-descricao">Aqui você encontra apoio, orientação e caminhos para uma vida melhor.</p>
+                    <p class="texto-descricao">Seja para conversar, buscar ajuda ou encontrar um ponto de acolhimento, este é o seu espaço.</p>
+
+                    <div class="grade-opcoes-entrada">
+                        <!-- Opção 1: Entrar -->
+                        <div class="cartao-opcao">
+                            <button id="botao-entrar" class="botao botao-destaque-azul" type="button">
+                                Entrar
+                            </button>
+                            <span class="legenda-opcao">Já tenho uma conta</span>
+                        </div>
+
+                        <!-- Opção 2: Criar conta -->
+                        <div class="cartao-opcao">
+                            <button id="botao-criar" class="botao botao-destaque-azul" type="button">
+                                Criar conta
+                            </button>
+                            <span class="legenda-opcao">Crie uma conta</span>
+                        </div>
+                    </div>
+
+                    <div class="acoes-anonimo">
+                        <button id="botao-anonimo" class="botao botao-secundario" type="button">
+                            Entrar de forma anônima
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Painel de Login rápido -->
+        <section id="painel-login" class="painel" aria-labelledby="titulo-login" hidden>
+            <div class="painel-titulo">
+                <h2 id="titulo-login">Acessar sua conta</h2>
+                <span class="legenda">JÁ TENHO UMA CONTA</span>
+            </div>
+
+            <form id="form-login" class="formulario">
+                <div class="campo-com-icone">
+                    <div class="icone-box" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                    </div>
+                    <div class="campo flex-1">
+                        <label for="login-email">Email</label>
+                        <input id="login-email" type="email" placeholder="Digite seu email" required>
+                    </div>
+                </div>
+
+                <div class="campo-com-icone">
+                    <div class="icone-box" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <div class="campo flex-1">
+                        <label for="login-senha">Senha</label>
+                        <input id="login-senha" type="password" placeholder="Digite sua senha" required>
+                    </div>
+                </div>
+
+                <div class="acoes acoes-direita">
+                    <button id="botao-cancelar-login" class="botao botao-secundario" type="button">Cancelar</button>
+                    <button id="botao-confirmar-login" class="botao botao-principal" type="submit">Confirmar entrada</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Painel de Criar Conta -->
+        <section id="painel-criar" class="painel" aria-labelledby="titulo-criar" hidden>
+            <div class="painel-titulo">
+                <h2 id="titulo-criar">Cadastro de usuário</h2>
+                <span class="legenda">CORAGEM PARA MUDAR É O QUE TE TRAZ ATÉ AQUI</span>
+            </div>
+
+            <form id="form-criar-conta" class="formulario">
+                <div class="campo-com-icone">
+                    <div class="icone-box" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <div class="campo flex-1">
+                        <label for="cadastro-nome">Nome</label>
+                        <input id="cadastro-nome" type="text" maxlength="150" placeholder="Digite seu nome completo" required>
+                    </div>
+                </div>
+
+                <div class="campo-com-icone">
+                    <div class="icone-box" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                    </div>
+                    <div class="campo flex-1">
+                        <label for="cadastro-email">Email</label>
+                        <input id="cadastro-email" type="email" placeholder="Digite seu email" required>
+                    </div>
+                </div>
+
+                <div class="campo-com-icone">
+                    <div class="icone-box" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
+                    <div class="campo flex-1">
+                        <label for="cadastro-cpf">CPF</label>
+                        <input id="cadastro-cpf" type="text" maxlength="14" placeholder="000.000.000-00" required>
+                    </div>
+                </div>
+
+                <div class="campo-com-icone">
+                    <div class="icone-box" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <div class="campo flex-1">
+                        <label for="cadastro-telefone">Telefone</label>
+                        <input id="cadastro-telefone" type="tel" placeholder="(00) 00000-0000" required>
+                    </div>
+                </div>
+
+                <div class="campo-com-icone">
+                    <div class="icone-box" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                    </div>
+                    <div class="campo flex-1">
+                        <label for="cadastro-nascimento">Data de nascimento</label>
+                        <input id="cadastro-nascimento" type="date" required>
+                    </div>
+                </div>
+
+                <div class="campo-com-icone">
+                    <div class="icone-box" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <div class="campo flex-1">
+                        <label for="cadastro-senha">Senha</label>
+                        <input id="cadastro-senha" type="password" placeholder="Crie uma senha" required>
+                    </div>
+                </div>
+
+                <div class="acoes acoes-direita">
+                    <button id="botao-cancelar-criar" class="botao botao-secundario" type="button">Cancelar</button>
+                    <button id="botao-confirmar-criar" class="botao botao-principal" type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="rodape">ReViver © 2026 — Você não está sozinho</footer>
+</body>
+</html>
