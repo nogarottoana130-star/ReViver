@@ -8,8 +8,8 @@ class ProfissionaisEntrada(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     id_especialidade: int = Field(gt=0)
-
+    nome_profissional: str
 
 class ProfissionaisSaida(ProfissionaisEntrada):
-    id_profisssional: int
-    nome_profissional: str
+    id_profissional: int
+    nome_especialidade: str

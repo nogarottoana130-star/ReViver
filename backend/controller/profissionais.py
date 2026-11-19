@@ -10,7 +10,7 @@ router = APIRouter(
 # O relacionamento permite buscar o nome na tabela especialidade.
 COLUNAS = (
     "id_profissional, nome_profissional, id_especialidade, "
-    "especialidade:especialidade(nome_specialidade)" 
+    "especialidade:especialidade(nome_especialidade)" 
 )
 
 def validar_especialidade(id_especialidade: int):

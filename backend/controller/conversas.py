@@ -11,13 +11,13 @@ router = APIRouter(
 COLUNAS = (
     "id_conversa, id_usuario, data_hora, pergunta_usuario, "
     "categoria_pergunta, nivel_de_urgencia, necessita_profissional, "
-    "encaminhamento_realizado, usuario:usuarios(nome_usuario)"
+    "encaminhamento_realizado, usuario:usuarios(nome)"
 )
 
 def validar_usuario(id_usuario: int):
     resposta = (
         supabase.table("usuarios")
-        .select("id_usuario, nome_usuario")
+        .select("id_usuario, nome")
         .eq("id_usuario", id_usuario)
         .execute()
     )
@@ -44,7 +44,7 @@ def preparar_saida(registro):
     return {
         "id_conversa": registro["id_conversa"],
         "id_usuario": registro["id_usuario"],
-        "nome_usuario": usuario["nome_usuario"],
+        "nome": usuario["nome"],
         "data_hora": registro["data_hora"],
         "pergunta_usuario": registro["pergunta_usuario"],
         "categoria_pergunta": registro.get("categoria_pergunta"),

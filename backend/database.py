@@ -1,10 +1,12 @@
 import os
 from pathlib import Path
+
+
 from dotenv import load_dotenv
 from supabase import Client, create_client
 
-# Lê o .env da pasta deste arquivo.
-caminho_env = Path(__file__).with_name(".env")
+#Carrega o .env da mesma pasta deste arquivo.
+caminho_env = Path(__file__).resolve().parent/".env"
 load_dotenv(caminho_env, override=True)
 
 url = os.getenv("SUPABASE_URL")

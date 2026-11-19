@@ -12,8 +12,10 @@ class AtendimentosClinicaEntrada(BaseModel):
     data_saida: date
     id_clinica: int = Field(gt=0)
     id_usuario: int = Field(gt=0)
-
+    status_atendimento: str 
 
 class AtendimentosClinicaSaida(AtendimentosClinicaEntrada):
     id_atendimento: int
-    status_atendimento: str
+    status_atendimento: str | None = None
+    nome_clinica: str | None = None
+    nome_usuario: str  | None = None

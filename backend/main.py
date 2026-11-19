@@ -10,7 +10,9 @@ from controller.servicos import router as servicos_router
 from controller.usuarios import router as usuarios_router
 from controller.conversas import router as conversas_router
 from controller.profissionais import router as profissionais_router
-from controller.atendimento_clinica import router as atendumento_clinica_router
+from controller.atendimento_clinica import router as atendimentos_clinica_router
+from controller.clinica_profissionais import router as clinica_profissionais_router
+from controller.clinica_servicos import router as clinica_servicos_router
 
 logger = logging.getLogger("uvicorn.error")
 app = FastAPI(
@@ -64,4 +66,6 @@ app.include_router(servicos_router)
 app.include_router(usuarios_router)
 app.include_router(conversas_router)
 app.include_router(profissionais_router)
-app.include_router(atendumento_clinica_router)
+app.include_router(atendimentos_clinica_router)
+app.include_router(clinica_profissionais_router)
+app.include_router(clinica_servicos_router)

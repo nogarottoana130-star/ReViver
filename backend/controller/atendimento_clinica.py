@@ -13,7 +13,7 @@ router = APIRouter(
 # O relacionamento permite buscar o nome da clínica e o nome do usuário.
 COLUNAS = (
     "id_atendimento, id_clinica, id_usuario, data_entrada, previsao_saida, "
-    "data_saida, status_atendimento, clinicas(nome_clinica), usuarios(nome_usuario)"
+    "data_saida, status_atendimento, clinicas(nome_clinica:nome), usuarios(nome_usuario:nome)"
 )
 
 def validar_clinica(id_clinica: str):

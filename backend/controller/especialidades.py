@@ -10,7 +10,7 @@ router = APIRouter(prefix="/especialidades", tags=["Especialidades"])
 def cadastrar_especialidade(dados: EspecialidadeEntrada):
     conteudo = dados.model_dump(mode="json")
     resposta = (
-        supabase.table("especialidades")
+        supabase.table("especialidade")
         .insert(conteudo)
         .execute()
     )
@@ -25,7 +25,7 @@ def cadastrar_especialidade(dados: EspecialidadeEntrada):
 @router.get("", response_model=list[EspecialidadeSaida])
 def listar_especialidades():
     resposta = (
-        supabase.table("especialidades")
+        supabase.table("especialidade")
         .select("*")
         .order("id_especialidade")
         .execute()
@@ -34,7 +34,7 @@ def listar_especialidades():
 @router.get("/{id_especialidades}", response_model=EspecialidadeSaida)
 def consultar_especialidade(id_especialidade: int):
     resposta = (
-        supabase.table("especialidades")
+        supabase.table("especialidade")
         .select("*")
         .eq("id_especialidade", id_especialidade)
         .execute()
@@ -47,7 +47,7 @@ def consultar_especialidade(id_especialidade: int):
 def atualizar_especialidade(id_especialidade: int, dados: EspecialidadeEntrada):
     conteudo = dados.model_dump(mode="json")
     resposta = (
-        supabase.table("especialidades")
+        supabase.table("especialidade")
         .update(conteudo)
         .eq("id_especialidade", id_especialidade)
         .execute()
@@ -60,7 +60,7 @@ def atualizar_especialidade(id_especialidade: int, dados: EspecialidadeEntrada):
                status_code=status.HTTP_204_NO_CONTENT)
 def excluir_especialidade(id_especialidade: int):
     resposta = (
-        supabase.table("especialidades")
+        supabase.table("especialidade")
         .delete()
         .eq("id_especialidade", id_especialidade)
         .execute()
